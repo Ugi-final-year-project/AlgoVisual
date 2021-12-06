@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -24,7 +26,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css" />
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -32,16 +34,25 @@
   <link rel="stylesheet" href="assets/css/style1.css">
   <!-- Boxiocns CDN Link -->
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header-inner-pages">
-    <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-sm-0" style="left: -88px;"><a href="index.html">AlgoVisual<span>.</span></a></h1>
+  <header id="header" class="header-inner-pages">
+
+    <div class="container-fluid d-flex align-items-center justify-content-lg-between">
+
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarToggleExternalContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+      <h1 class="logo me-auto me-sm-0"><a href="index.html">AlgoVisual<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -62,18 +73,26 @@
   </header><!-- End Header -->
 
   <main id="main">
-    
-  
-    <div class="container-fluid">
-      <div style="height: 70px;">
-        
 
+    <div class="container-fluid">
+      <div class="container">
+        <div class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Insertion Sort</a>
+          <button type="button" class="mx-2 btn btn-outline-primary" onclick="start2()">Start</button>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Input" id="myText" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" onclick="create()" id="mybutton">Button</button>
+            </div>
+          </div>
+        </div>
       </div>
+
+
       <!-- dropdown -->
       <div class="row">
         <div class="col-4">
-          <div class="sidebar">
-           
+          <div class="sidebar close">
             <ul class="nav-links">
               <li>
                 <ul class="sub-menu blank">
@@ -83,9 +102,10 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
+                    <i class='bx bx-collection'></i>
                     <span class="link_name">Searching</span>
                   </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
+                  <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                   <li><a class="link_name" href="#">Searching</a></li>
@@ -96,9 +116,10 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
+                    <i class='bx bx-book-alt'></i>
                     <span class="link_name">Sorting</span>
                   </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
+                  <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                   <li><a class="link_name" href="#">Sorting</a></li>
@@ -109,13 +130,14 @@
                   <li><a href="#">Merge Sort</a></li>
                 </ul>
               </li>
-              
+
               <li>
                 <div class="iocn-link">
                   <a href="#">
+                    <i class='bx bx-plug'></i>
                     <span class="link_name">Greedy Algorithm</span>
                   </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
+                  <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                   <li><a class="link_name" href="#">Greedy Algorithm</a></li>
@@ -126,9 +148,10 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
+                    <i class='bx bx-plug'></i>
                     <span class="link_name">Dynamic Programming</span>
                   </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
+                  <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                   <li><a class="link_name" href="#">Dynamic Programming</a></li>
@@ -139,9 +162,10 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
+                    <i class='bx bx-plug'></i>
                     <span class="link_name">Simple Recurrsion</span>
                   </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
+                  <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                   <li><a class="link_name" href="#">Simple Recurrsion</a></li>
@@ -150,69 +174,40 @@
                 </ul>
               </li>
               <li>
-                <div class="iocn-link">
                 <a href="#">
+                  <i class='bx bx-history'></i>
                   <span class="link_name">History</span>
                 </a>
-                <ul class="sub-menu">
+                <ul class="sub-menu blank">
                   <li><a class="link_name" href="#">History</a></li>
                 </ul>
-              </div>
               </li>
-        
               <li>
-            <div class="profile-details">
-              <div class="profile-content">
-                <!--<img src="image/profile.jpg" alt="profileImg">-->
-              </div>
-              <div class="name-job">
-                <div class="profile_name">Aman Akarshan Sinha</div>
-                <div class="job">Web Desginer</div>
-              </div>
-              <i class='bx bx-log-out' ></i>
-            </div>
-          </li>
-        </ul>
+                <a href="#">
+                  <i class='bx bx-cog'></i>
+                  <span class="link_name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">Setting</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="profile-details">
+                  <div class="profile-content">
+                    <!--<img src="image/profile.jpg" alt="profileImg">-->
+                  </div>
+                  <div class="name-job">
+                    <div class="profile_name">Prem Shahi</div>
+                    <div class="job">Web Desginer</div>
+                  </div>
+                  <i class='bx bx-log-out'></i>
+                </div>
+              </li>
+            </ul>
           </div>
-                 
         </div>
-        <div class="col-8">
-    <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
-      <div class="container-fluid">
-       
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-  
-        <!-- Button trigger modal -->
-      <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+        <div class="container">
+          <div id="array"></div>
         </div>
       </div>
     </div>
@@ -225,9 +220,11 @@
 
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="script.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -238,7 +235,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/script.js"></script>  
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
