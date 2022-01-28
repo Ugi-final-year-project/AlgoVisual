@@ -1,34 +1,13 @@
-var container = document.getElementById("array");
-var startbtn = document.getElementById("startbtn");
-var array, flag = false,run=true;
-function generatearray() {
-	container.innerHTML = "";
-	var len = 20;
-	if (flag) {
-		len = array.length;
-	}
-	for (var i = 0; i < len; i++) {
-		if (!flag)
-			var value = Math.ceil(Math.random() * 100);
-		else
-			var value = array[i];
-		var array_ele = document.createElement("div");
-		array_ele.classList.add("block");
-		array_ele.style.height = `${value * 3}px`;
-		array_ele.style.transform = `translate(${i * 30}px)`;
-		var array_ele_label = document.createElement("label");
-		array_ele_label.classList.add("block_id");
-		array_ele_label.innerText = value;
-		array_ele.appendChild(array_ele_label);
-		container.appendChild(array_ele);
-	}
-}
+var container = document.getElementById("array")
+let array = await import("./utils.js")
+var run=true;
+array.generatearray()
 function swap(el1, el2) {
 	return new Promise((resolve) => {
 		var temp = el1.style.transform;
 		el1.style.transform = el2.style.transform;
 		el2.style.transform = temp;
-		window.requestAnimationFrame(function() {
+		window.requestAnimationFrame(function () {
 			setTimeout(() => {
 				container.insertBefore(el2, el1);
 				resolve();
@@ -37,15 +16,15 @@ function swap(el1, el2) {
 	});
 }
 async function pauseHandler() {
-	console.log('a');
 	while (run == false) await sleep(1);
 	return;
-  }
-  
-  function sleep(ms) {
+}
+
+function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
-  }
+}
 async function BubbleSort(delay = 100) {
+	
 	var blocks = document.querySelectorAll(".block");
 
 	for (var i = 0; i < blocks.length; i += 1) {
@@ -75,19 +54,16 @@ async function BubbleSort(delay = 100) {
 	}
 	startbtn.disabled = false;
 }
-generatearray();
-function start() {
-	BubbleSort();
-	startbtn.disabled = true;
-}
-function create() {
-	array = document.getElementById("myText").value;
-	array = array.split(',').map(Number);
-	console.log(array);
-	flag = true;
-	generatearray();
-}
+document.getElementById("start").addEventListener("click",()=>{
+    array.start(BubbleSort);
+})
+// function create() {
+// 	array = document.getElementById("myText").value;
+// 	array = array.split(',').map(Number);
+// 	console.log(array);
+// 	flag = true;
+// 	generatearray();
+// }
 function pause(){
 	run=!run;
 }
-
