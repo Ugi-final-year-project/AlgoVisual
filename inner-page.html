@@ -75,10 +75,10 @@
   <main id="main">
 
     <div class="container-fluid">
-      <div class="container">
+      <div id="startbu" class="container">
         <div class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">Bubble Sort</a>
-          <button type="button" class="mx-2 btn btn-outline-primary" onclick="start()">Start</button>
+          <button type="button" class="mx-2 btn btn-outline-primary" id="start">Start</button>
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Input" id="myText" aria-describedby="basic-addon2">
             <div class="input-group-append">
@@ -92,7 +92,8 @@
       <!-- dropdown -->
       <div class="row">
         <div class="col-4">
-          <div class="sidebar close">
+          <div class="sidebar">
+
             <ul class="nav-links">
               <li>
                 <ul class="sub-menu blank">
@@ -102,7 +103,6 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
-                    <i class='bx bx-collection'></i>
                     <span class="link_name">Searching</span>
                   </a>
                   <i class='bx bxs-chevron-down arrow'></i>
@@ -116,16 +116,15 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
-                    <i class='bx bx-book-alt'></i>
                     <span class="link_name">Sorting</span>
                   </a>
                   <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
                   <li><a class="link_name" href="#">Sorting</a></li>
-                  <li><a href="#">Bubble Sort</a></li>
-                  <li><a href="#">Insertion Sort</a></li>
-                  <li><a href="#">Selection Sort</a></li>
+                  <li id="bubble"><a href="#">Bubble Sort</a></li>
+                  <li id="insert"><a href="#">Insertion Sort</a></li>
+                  <li id="select"><a href="#">Selection Sort</a></li>
                   <li><a href="#">Quick Sort</a></li>
                   <li><a href="#">Merge Sort</a></li>
                 </ul>
@@ -134,7 +133,6 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
-                    <i class='bx bx-plug'></i>
                     <span class="link_name">Greedy Algorithm</span>
                   </a>
                   <i class='bx bxs-chevron-down arrow'></i>
@@ -148,7 +146,6 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
-                    <i class='bx bx-plug'></i>
                     <span class="link_name">Dynamic Programming</span>
                   </a>
                   <i class='bx bxs-chevron-down arrow'></i>
@@ -162,7 +159,6 @@
               <li>
                 <div class="iocn-link">
                   <a href="#">
-                    <i class='bx bx-plug'></i>
                     <span class="link_name">Simple Recurrsion</span>
                   </a>
                   <i class='bx bxs-chevron-down arrow'></i>
@@ -174,30 +170,23 @@
                 </ul>
               </li>
               <li>
-                <a href="#">
-                  <i class='bx bx-history'></i>
-                  <span class="link_name">History</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">History</a></li>
-                </ul>
+                <div class="iocn-link">
+                  <a href="#">
+                    <span class="link_name">History</span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li><a class="link_name" href="#">History</a></li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-cog'></i>
-                  <span class="link_name">Setting</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">Setting</a></li>
-                </ul>
-              </li>
+
               <li>
                 <div class="profile-details">
                   <div class="profile-content">
                     <!--<img src="image/profile.jpg" alt="profileImg">-->
                   </div>
                   <div class="name-job">
-                    <div class="profile_name">Prem Shahi</div>
+                    <div class="profile_name">Aman Akarshan Sinha</div>
                     <div class="job">Web Desginer</div>
                   </div>
                   <i class='bx bx-log-out'></i>
@@ -224,7 +213,7 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="script.js"></script>
+  <script src="src/sort.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
