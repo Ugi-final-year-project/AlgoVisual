@@ -1,7 +1,6 @@
 var container = document.getElementById("array")
-let array = await import("./utils.js")
+var startbtn=document.getElementById("start")
 var run = true;
-array.generatearray()
 function swap(el1, el2) {
     return new Promise((resolve) => {
         var temp = el1.style.transform;
@@ -64,6 +63,6 @@ async function InsertionSort(delay = 600) {
     }
 
 }
-document.getElementById("start").addEventListener("click",()=>{
-    array.start(InsertionSort);
+startbtn.addEventListener("click",()=>{
+    InsertionSort();
 })
