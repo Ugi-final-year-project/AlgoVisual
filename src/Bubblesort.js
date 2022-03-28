@@ -1,7 +1,6 @@
 var container = document.getElementById("array")
-let array = await import("./utils.js")
+var startbtn=document.getElementById("start")
 var run=true;
-array.generatearray()
 function swap(el1, el2) {
 	return new Promise((resolve) => {
 		var temp = el1.style.transform;
@@ -24,9 +23,8 @@ function sleep(ms) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
 }
 async function BubbleSort(delay = 100) {
-	
 	var blocks = document.querySelectorAll(".block");
-
+	startbtn.disabled=true;
 	for (var i = 0; i < blocks.length; i += 1) {
 		for (var j = 0; j < blocks.length - i - 1; j += 1) {
 
@@ -54,8 +52,8 @@ async function BubbleSort(delay = 100) {
 	}
 	startbtn.disabled = false;
 }
-document.getElementById("start").addEventListener("click",()=>{
-    array.start(BubbleSort);
+startbtn.addEventListener("click",()=>{
+    BubbleSort();
 })
 // function create() {
 // 	array = document.getElementById("myText").value;

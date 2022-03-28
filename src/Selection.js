@@ -1,7 +1,6 @@
 var container = document.getElementById("array")
-let array = await import("./utils.js")
+var startbtn=document.getElementById("start")
 var run = true;
-array.generatearray()
 function swap(el1, el2) {
     return new Promise((resolve) => {
         var temp = el1.style.transform;
@@ -71,11 +70,7 @@ async function SelectionSort(delay = 100) {
         bars[min_idx].style.backgroundColor = "  rgb(24, 190, 255)";
         bars[i].style.backgroundColor = " rgb(49, 226, 13)";
     }
-    document.getElementById("Button1").disabled = false;
-    document.getElementById("Button1").style.backgroundColor = "#6f459e";
-    document.getElementById("Button2").disabled = false;
-    document.getElementById("Button2").style.backgroundColor = "#6f459e";
 }
-document.getElementById("start").addEventListener("click",()=>{
-    array.start(SelectionSort);
+startbtn.addEventListener("click",()=>{
+    SelectionSort();
 })
